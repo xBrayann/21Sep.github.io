@@ -182,3 +182,53 @@ body {
 }
 
 /* ===== Responsive para móviles ===== */
+@media (max-width: 480px) {
+  .container {
+    width: 95%;
+  }
+
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centra verticalmente */
+    gap: 1rem;
+    padding-bottom: 2rem; /* espacio abajo para que se vea */
+  }
+
+  .card {
+    width: 90%;          /* ancho casi completo */
+    height: 300px;       /* altura fija más razonable */
+    max-height: 400px;   /* no crece demasiado */
+  }
+
+  .card-content {
+    padding: 1rem;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+  }
+
+  .card-preview {
+    font-size: 1rem;
+  }
+
+  .card-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .card-content p {
+    font-size: 1rem;
+  }
+
+  .btn, .answer-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  #answers {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
