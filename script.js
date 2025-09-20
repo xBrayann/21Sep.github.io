@@ -9,9 +9,9 @@ const questions = [
     { 
         text: "¿En donde nos conocimos y cuando fue?",
         options: [
-            { text: "23 - Free Fire", correct: false },
-            { text: "31 - Free Fire", correct: true },
-            { text: "31 - Roblox", correct: false }
+            { text: "", correct: false },
+            { text: "", correct: true },
+            { text: "", correct: false }
         ]
     },
     {
@@ -35,7 +35,6 @@ const questions = [
 let currentQuestion = 0;
 let questionAnswered = false;
 
-// ===== Cargar la primera pregunta =====
 function loadQuestion(index) {
     const q = questions[index];
     document.getElementById("question-text").textContent = q.text;
@@ -92,7 +91,6 @@ function addCard() {
     cardsContainer.appendChild(cardElement);
 }
 
-// ===== Ir a la siguiente pregunta =====
 nextBtn.addEventListener("click", () => {
     currentQuestion++;
     if (currentQuestion < questions.length) {
@@ -103,7 +101,6 @@ nextBtn.addEventListener("click", () => {
     }
 });
 
-// ===== Reiniciar el juego =====
 resetBtn.addEventListener("click", () => {
     currentQuestion = 0;
     cardsContainer.innerHTML = "";
