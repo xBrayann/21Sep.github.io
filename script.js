@@ -95,11 +95,25 @@ nextBtn.addEventListener("click", () => {
     currentQuestion++;
     if (currentQuestion < questions.length) {
         loadQuestion(currentQuestion);
+
+        // 👇 Hace scroll al inicio de la sección de preguntas
+        document.getElementById("headerxx").scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
     } else {
         feedback.textContent = "🎉 ¡Has respondido todas las preguntas!";
         nextBtn.disabled = true;
+
+        // También subimos al inicio cuando termina el juego
+        document.getElementById("preguntas").scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
     }
 });
+
 
 resetBtn.addEventListener("click", () => {
     currentQuestion = 0;
