@@ -9,9 +9,9 @@ const questions = [
     { 
         text: "¿En donde nos conocimos y cuando fue?",
         options: [
-            { text: "", correct: false },
-            { text: "", correct: true },
-            { text: "", correct: false }
+            { text: "f", correct: false },
+            { text: "f", correct: true },
+            { text: "f", correct: false }
         ]
     },
     {
